@@ -1,4 +1,5 @@
-https://prod.liveshare.vsengsaas.visualstudio.com/join?FE0EB4ADA27A3DCA1D7A9D04DF3F7A413BF3
+import pickle
+import os
 
 #-- coding: latin-1 --
 class Except(Exception):
@@ -8,7 +9,9 @@ class Except(Exception):
 Classe Deque: implementação utilizando lista/vetor estático circular.
 """
 class Deque:
-    def __init__ (self,max_deque):
+    def __init__ (self,max_deque,nome_arquivo):
+        self.__nome_arquivo = nome_arquivo
+
         """Cria novo deque como lista de tamanho fixo: vetor estático."""
         self.max_deque=max_deque # Tamanho máximo do deque.
         self._data=[None]*max_deque # Lista de tamanho máximo N.
@@ -128,6 +131,7 @@ guardado."""
         if self.is_full():
             raise Except("Deque cheio!")
         if self.is_empty():
+            
             self._data[self._front]=e
         else:
             self._top+=1
@@ -161,7 +165,3 @@ guardado."""
             if self._top==-1: # Passou o início do vetor?
                 self._top=self._max_deque-1 # Circula.
             return e_top
-        
-    
-
-
