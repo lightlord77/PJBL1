@@ -1,5 +1,4 @@
-https://prod.liveshare.vsengsaas.visualstudio.com/join?F642A8A1A96E7CFC2D195CD69C556087E05C
-
+https://prod.liveshare.vsengsaas.visualstudio.com/join?FE0EB4ADA27A3DCA1D7A9D04DF3F7A413BF3
 
 #-- coding: latin-1 --
 class Except(Exception):
