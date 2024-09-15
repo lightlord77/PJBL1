@@ -9,8 +9,8 @@ class Except(Exception):
 Classe Deque: implementação utilizando lista/vetor estático circular.
 """
 class Deque:
-    def __init__ (self,max_deque,nome_arquivo):
-        self.__nome_arquivo = nome_arquivo
+    def __init__ (self,max_deque,Comp_Fer):
+        self.Comp_Fer = Comp_Fer
 
         """Cria novo deque como lista de tamanho fixo: vetor estático."""
         self.max_deque=max_deque # Tamanho máximo do deque.
